@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'listado',
     'rest_framework',
     'corsheaders',
+    'rest_framework.authtoken',
 
 ]
 
@@ -133,6 +134,9 @@ REST_FRAMEWORK = {
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    )
 }
 CORS_ORIGIN_ALLOW_ALL = True
