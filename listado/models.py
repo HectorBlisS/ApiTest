@@ -8,4 +8,7 @@ class Alumno(models.Model):
 	twitter=models.CharField(max_length=140,null=True,blank=True)
 
 	def __str__(self):
-		return self.first_name
+		try:
+			return self.first_name
+		except:
+			pass
