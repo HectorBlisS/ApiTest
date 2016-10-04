@@ -8,4 +8,6 @@ class Alumno(models.Model):
 	twitter=models.CharField(max_length=140,null=True,blank=True)
 
 	def __str__(self):
-		return "Secured"
+		if not self.first_name:
+			return "Secured"
+		return self.first_name
