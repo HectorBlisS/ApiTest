@@ -11,4 +11,4 @@ class Alumno(models.Model):
 		try:
 			return self.first_name
 		except:
-			pass
+			return "no-name"
